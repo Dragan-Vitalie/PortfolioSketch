@@ -1,14 +1,11 @@
 import React, { useEffect, useState } from 'react';
 
 const CircularProgress = ({ percentage, Icon }) => {
-  const radius = 45; // Radius of the circle
-  const strokeWidth = 8; // Stroke width of the circle
+  const radius = 45;
+  const strokeWidth = 8;
   const circumference = 2 * Math.PI * radius;
 
-  // State to control the initial offset
-  const [offset, setOffset] = useState(circumference); // Start with full offset
-
-  // Calculate the progress based on the percentage prop
+  const [offset, setOffset] = useState(circumference);
   const progress = (percentage / 100) * circumference; 
 
   // Determine color based on percentage
@@ -27,7 +24,7 @@ const CircularProgress = ({ percentage, Icon }) => {
     <div className='ml-4' style={{ position: 'relative', width: '100px', height: '100px' }}>
       <svg width="100" height="100">
         <circle
-          stroke="rgb(55 65 81 / var(--tw-bg-opacity))" // Background color of the circle
+          stroke="rgb(55 65 81)"
           fill="transparent"
           strokeWidth={strokeWidth}
           r={radius}

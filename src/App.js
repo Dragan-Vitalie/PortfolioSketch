@@ -28,13 +28,7 @@ const App = () => {
           </section>
         </main>
       </div>
-      
-      <Sidebar />
-      <About />
-      <Experience />
-      <Projects />
-      <Contact />
-  </>
+    </>
   );
 };
 
