@@ -1,33 +1,42 @@
 import React from 'react';
-import SocialIcon from './SocialIcon';
+import Arrows from '../icons/Arrows';
+import Github from '../icons/Github';
+import Linkedin from '../icons/Linkedin';
+import Instagram from '../icons/Instagram';
 
-const Sidebar = ({ setActiveSection, activeSection }) => {
-  const sections = ['about', 'experience', 'projects', 'contact'];
+const Sidebar = ({ setActiveSection, activeSection}) => {
   return (
-    <aside className="w-64 bg-gray-800 p-6 shadow-lg">
-      <h1 className="text-2xl font-bold mb-4">Vitalie Dragan</h1>
-      <p className="text-gray-400 mb-8">Software Engineer</p>
-      <nav className="bg-gray-800 min-w-[200px] p-4">
-        <ul>
-          {sections.map(section => (
-            <li
-              key={section}
-              className={`p-2 cursor-pointer rounded ${activeSection === section ? 'bg-gray-600' : 'hover:bg-gray-700'}`}
-              onClick={() => setActiveSection(section)}
-            >
-              {section.charAt(0).toUpperCase() + section.slice(1)}
-            </li>
-          ))}
-        </ul>
+    <aside className="mt-48 ml-20 w-80 p-6 h-fit fixed overflow-y-auto">
+      <h1 className="text-4xl font-bold mb-2">Vitalie Dragan</h1>
+      <p className="text-gray-400 mb-6">Software Engineer</p>
+      <nav className="space-y-8">
+        {['about', 'experience', 'projects', 'contact'].map((section) => (
+          <button
+            key={section}
+            onClick={() => {
+              setActiveSection(section);
+              document.getElementById(section).scrollIntoView({ behavior: 'smooth' });
+            }}
+            className={`w-5/6 rounded-md text-left px-4 py-1 flex justify-between tracking-widest text-gray-300 hover:text-white hover:bg-gray-800 ${activeSection === section ? 'bg-gray-700 text-white font-bold' : ''}`}
+          >
+            {activeSection === section && <Arrows />}
+            {section.charAt(0).toUpperCase() + section.slice(1)}
+          </button>
+        ))}
       </nav>
-      <div className="mt-10 flex space-x-4">
-        <SocialIcon link="https://github.com/your-profile" icon="github" />
-        <SocialIcon link="https://linkedin.com/in/your-profile" icon="linkedin" />
-      </div>
+      <div className="mt-16 space-x-6 justify-start rounded-lg flex">
+         <a href="https://github.com/Vitalie-Dragan-Songkick" target="_blank" rel="noopener noreferrer" className="p-4 text-gray-400 hover:text-white hover:bg-gray-700 hover:rounded-xl">
+          <Github />
+        </a>
+         <a href="https://www.linkedin.com/in/vitalie-dragan/" target="_blank" rel="noopener noreferrer" className="p-4 text-gray-400 hover:text-white hover:bg-gray-700 hover:rounded-xl">
+           <Linkedin />
+         </a>
+         <a href="https://www.instagram.com/dragan_vitali/" target="_blank" rel="noopener noreferrer" className="p-4 text-gray-400 hover:text-white hover:bg-gray-700 hover:rounded-xl">
+           <Instagram />
+         </a>
+       </div>
     </aside>
   );
 };
-
-const capitalize = str => str.charAt(0).toUpperCase() + str.slice(1);
 
 export default Sidebar;
