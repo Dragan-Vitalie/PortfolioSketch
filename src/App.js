@@ -164,11 +164,14 @@
 
 
 import React, { useState } from 'react';
-import './App.css'; // Make sure this file exists for styles
-// import Selected from './icons/Selected';
+import './App.css';
 import Arrows from './icons/Arrows';
 import Github from './icons/Github';
 import Linkedin from './icons/Linkedin';
+import Instagram from './icons/Instagram';
+import Briefcase from './icons/Briefcase';
+import ProgressContainer from './ProgressContainer';
+
 
 const App = () => {
   const [activeSection, setActiveSection] = useState('about');
@@ -176,7 +179,7 @@ const App = () => {
   return (
     <div className="bg-gray-900 text-white min-h-screen flex">
       <Sidebar setActiveSection={setActiveSection} activeSection={activeSection} />
-      <main className="flex-1 p-8 ml-80 overflow-y-auto">
+      <main className="flex-1 pl-12 pr-10 ml-80 overflow-y-auto">
         <section id="about" className={`section ${activeSection === 'about' ? 'active' : ''}`}>
           <About />
         </section>
@@ -194,9 +197,9 @@ const App = () => {
   );
 };
 
-const Sidebar = ({ setActiveSection, activeSection, selected}) => {
+const Sidebar = ({ setActiveSection, activeSection}) => {
   return (
-    <aside className="mt-80 ml-20 w-80 p-6 h-fit fixed overflow-y-auto">
+    <aside className="mt-48 ml-20 w-80 p-6 h-fit fixed overflow-y-auto">
       <h1 className="text-4xl font-bold mb-2">Vitalie Dragan</h1>
       <p className="text-gray-400 mb-6">Software Engineer</p>
       <nav className="space-y-8">
@@ -221,6 +224,9 @@ const Sidebar = ({ setActiveSection, activeSection, selected}) => {
          <a href="https://www.linkedin.com/in/vitalie-dragan/" target="_blank" rel="noopener noreferrer" className="p-4 text-gray-400 hover:text-white hover:bg-gray-700 hover:rounded-xl">
            <Linkedin />
          </a>
+         <a href="https://www.instagram.com/dragan_vitali/" target="_blank" rel="noopener noreferrer" className="p-4 text-gray-400 hover:text-white hover:bg-gray-700 hover:rounded-xl">
+           <Instagram />
+         </a>
        </div>
     </aside>
   );
@@ -228,18 +234,13 @@ const Sidebar = ({ setActiveSection, activeSection, selected}) => {
 
 const About = () => {
   return (
-    <section className="section-content">
+    <section className="section-content w-11/12">
       <h2 className="text-4xl font-bold mb-4">About Me</h2>
       <p className="text-gray-300 mb-4">
         Dedicated and ambitious professional with a passion for understanding how things are built and function. Known for going the extra mile to ensure project success. Skilled in problem solving, project management and teamwork. Eager to contribute and drive meaningful outcomes in a dynamic, growth-oriented environment.
       </p>
-      <div className="mt-6">
-        <h3 className="text-xl font-semibold mb-2">Skills</h3>
-        <div className="flex flex-wrap gap-2">
-          {['HTML', 'CSS', 'SCSS', 'JavaScript', 'React', 'Bootstrap', 'Tailwind', 'Material UI', 'Ruby', 'Ruby on Rails', 'SQL', 'MySQL', 'Git', 'GitHub', 'Figma', 'API Proficient'].map(skill => (
-            <span key={skill} className="bg-gray-700 text-gray-300 px-3 py-1 rounded-full text-sm">{skill}</span>
-          ))}
-        </div>
+      <div>
+        <ProgressContainer />
       </div>
     </section>
   );
@@ -277,7 +278,8 @@ const Projects = () => {
       <h2 className="text-4xl font-bold mb-6">Projects</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="bg-gray-800 p-6 rounded-lg">
-          <h3 className="text-xl font-semibold mb-2">Event Management System</h3>
+          {/* <Briefcase /> */}
+          <h3 className="text-xl font-semibold mb-2 flex justify-between items-center">Event Management System <Briefcase /></h3>
           <p className="text-gray-300 mb-4">Developed a system that reduced event editing time by over 90%, from 25 minutes to under 2 minutes.</p>
           <div className="flex gap-2">
             <span className="bg-gray-700 text-gray-300 px-2 py-1 rounded text-sm">React</span>
@@ -286,7 +288,8 @@ const Projects = () => {
           </div>
         </div>
         <div className="bg-gray-800 p-6 rounded-lg">
-          <h3 className="text-xl font-semibold mb-2">Page Modernization</h3>
+          {/* <Briefcase /> */}
+          <h3 className="text-xl font-semibold mb-2 flex justify-between items-center ">Page Modernization <Briefcase /></h3>
           <p className="text-gray-300 mb-4">Main developer for page modernization, from old server side ruby code to a fancy looking client side rendering. Implemented spam link checking using Google's WebRisk API as part of this work</p>
           <div className="flex gap-2">
             <span className="bg-gray-700 text-gray-300 px-2 py-1 rounded text-sm">React</span>
@@ -302,21 +305,19 @@ const Contact = () => {
   return (
     <section className="section-content">
       <h2 className="text-4xl font-bold mb-6">Contact</h2>
-      <div className=''>
+      <div>
         <p className="text-gray-300 mb-2">
-          <a href='https://mail.google.com/mail/u/0/#inbox?compose=new' target='_blank'>Email: dragan-vitali@mail.com</a>
+          <a href='https://mail.google.com/mail/u/0/#inbox?compose=new' className='hover:border-sky-800 hover:border p-2 -ml-2 rounded-md' target='_blank' rel="noopener noreferrer"> dragan-vitali@mail.com</a>
         </p>
-        <p className="text-gray-300 mb-2">Phone: 07562690128</p>
-        <p className="text-gray-300 mb-6">Languages: English, Romanian, Russian</p>
+        <p className="text-gray-300 mb-2 ">07562690128</p>
       </div>
-      
-      <form className="mt-20 space-y-4">
+      <form className="mt-10 space-y-4">
         <div className="flex space-x-4">
           <div className="w-1/2">
             <label className="block text-gray-300 mb-1">First Name</label>
             <input
               type="text"
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-gray-600 bg-gray-800 text-white"
+              className="w-full h-8 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-gray-600 bg-gray-800 text-white"
               placeholder="First Name"
             />
           </div>
@@ -324,7 +325,7 @@ const Contact = () => {
             <label className="block text-gray-300 mb-1">Last Name</label>
             <input
               type="text"
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-gray-600 bg-gray-800 text-white"
+              className="w-full h-8 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-gray-600 bg-gray-800 text-white"
               placeholder="Last Name"
             />
           </div>
@@ -334,7 +335,7 @@ const Contact = () => {
           <label className="block text-gray-300 mb-1">Email</label>
           <input
             type="email"
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-gray-600 bg-gray-800 text-white"
+            className="w-full h-8 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-gray-600 bg-gray-800 text-white"
             placeholder="Email"
           />
         </div>
@@ -343,7 +344,7 @@ const Contact = () => {
           <label className="block text-gray-300 mb-1">Phone Number</label>
           <input
             type="tel"
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-gray-600 bg-gray-800 text-white"
+            className="w-full h-8 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-gray-600 bg-gray-800 text-white"
             placeholder="Phone Number"
           />
         </div>
@@ -352,7 +353,7 @@ const Contact = () => {
           <label className="block text-gray-300 mb-1">Company</label>
           <input
             type="text"
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-gray-600 bg-gray-800 text-white"
+            className="w-full h-8 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-gray-600 bg-gray-800 text-white"
             placeholder="Company"
           />
         </div>

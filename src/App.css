@@ -19,7 +19,7 @@ body {
 }
 
 .section-content {
-  max-width: 60vw; /* Center content and limit width */
+  max-width: 68vw; /* Center content and limit width */
   margin: 0 auto; /* Center align the section */
   padding: 0 20px; /* Add horizontal padding */
 }
