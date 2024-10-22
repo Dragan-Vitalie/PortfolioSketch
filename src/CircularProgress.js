@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 const CircularProgress = ({ percentage, Icon }) => {
   const radius = 45;
-  const strokeWidth = 8;
+  const strokeWidth = 6;
   const circumference = 2 * Math.PI * radius;
 
   const [offset, setOffset] = useState(circumference);

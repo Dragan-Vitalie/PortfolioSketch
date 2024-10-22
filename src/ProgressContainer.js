@@ -36,9 +36,9 @@ const skills = [
 
 const ProgressContainer = () => {
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexWrap: 'wrap', columnGap: '10px', height: '80vh' }}>
+    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexWrap: 'wrap', columnGap: '10px', width: '110%', marginLeft: '-50px'}}>
       {skills.map((skill, index) => (
-        <div key={index} className='-mt-10 h-fit' style={{ textAlign: 'center', justifyContent: 'center'}}>
+        <div key={index} className='h-fit' style={{ textAlign: 'center', justifyContent: 'center'}}>
           <CircularProgress percentage={skill.percentage} Icon={skill.icon} />
           <p style={{
             width:'130px',

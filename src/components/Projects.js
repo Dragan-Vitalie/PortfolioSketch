@@ -1,5 +1,9 @@
 import React from 'react';
 import desktopImage from './../images/desktop.png'
+import SignInImage from './../images/Signin.gif'
+import Kinoland from './../images/KinoLand.gif'
+import FirstWebsite from './../images/FirstWebsite.gif'
+
 
 const Projects = () => {
   return (
@@ -70,48 +74,52 @@ const Projects = () => {
             <span className="bg-gray-700 text-gray-300 px-2 py-1 rounded text-sm">Ruby on Rails</span>
           </div>
         </div>
+
+      {/* Personal Projects */}
       <h2 className="text-xl ml-6 mt-20 font-bold mb-6">Personal Projects</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <div className="bg-gray-800 p-6 rounded-lg">
-        <h3 className="text-xl font-semibold mb-2 flex justify-between items-center ">Signin / Signup</h3>
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
-            <p className="text-gray-300 mb-4"><strong className='text-lime-300'>title </strong>, text - text - text</p>
-            <img className='h-40' src={desktopImage} alt='ProjectName'/>
-          </div>
-          <div className="flex gap-2">
-            <span className="bg-gray-700 text-gray-300 px-2 py-1 rounded text-sm">React</span>
-          </div>
-        </div>
-        <div className="bg-gray-800 p-6 rounded-lg">
-          <h3 className="text-xl font-semibold mb-2 flex justify-between items-center ">Redis with Github API</h3>
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
-            <p className="text-gray-300 mb-4"><strong className='text-lime-300'>title </strong>, text - text - text</p>
-            <img className='h-40' src={desktopImage} alt='ProjectName'/>
-          </div>
-          <div className="flex gap-2">
-            <span className="bg-gray-700 text-gray-300 px-2 py-1 rounded text-sm">React</span>
-          </div>
-        </div>
-        <div className="bg-gray-800 p-6 rounded-lg">
-          <h3 className="text-xl font-semibold mb-2 flex justify-between items-center ">POC</h3>
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
-            <p className="text-gray-300 mb-4"><strong className='text-lime-300'>title </strong>, text - text - text</p>
-            <img className='h-40' src={desktopImage} alt='ProjectName'/>
-          </div>
-          <div className="flex gap-2">
-            <span className="bg-gray-700 text-gray-300 px-2 py-1 rounded text-sm">React</span>
-          </div>
-        </div>
-        <div className="bg-gray-800 p-6 rounded-lg">
-          <h3 className="text-xl font-semibold mb-2 flex justify-between items-center ">GiG Radar</h3>
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
-            <p className="text-gray-300 mb-4"><strong className='text-lime-300'>title </strong>, text - text - text</p>
-            <img className='h-40' src={desktopImage} alt='ProjectName'/>
-          </div>
-          <div className="flex gap-2">
-            <span className="bg-gray-700 text-gray-300 px-2 py-1 rounded text-sm">React</span>
-          </div>
-        </div>
+          <a href="https://login-signup-modal.netlify.app/" target="_blank" rel="noreferrer" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+            <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src={SignInImage} alt="" />
+            <div class="flex flex-col justify-between p-4 leading-normal">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Sign in / Sign up</h5>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+            </div>
+          </a>
+          <a href="https://flowbite.com/docs/components/card/" target="_blank" rel="noreferrer" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+            <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src={desktopImage} alt="" />
+            <div class="flex flex-col justify-between p-4 leading-normal">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Redis with Github API</h5>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+            </div>
+          </a>
+          <a href="https://flowbite.com/docs/components/card/" target="_blank" rel="noreferrer" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+            <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src={desktopImage} alt="" />
+            <div class="flex flex-col justify-between p-4 leading-normal">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">POC</h5>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+            </div>
+          </a>
+          <a href="https://flowbite.com/docs/components/card/" target="_blank" rel="noreferrer" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+            <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src={desktopImage} alt="" />
+            <div class="flex flex-col justify-between p-4 leading-normal">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">GiG Radar</h5>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+            </div>
+          </a>
+          <a href="https://kino-land-vitalie-dragan.netlify.app/" target="_blank" rel="noreferrer" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+            <img class="object-cover w-full rounded-t-lg h-full md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src={Kinoland} alt="" />
+            <div class="flex flex-col justify-between p-4 leading-normal">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Search a Movie</h5>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Kinoland is utilizing the (OMDb) API, a RESTful web service that gives access to details used to enrich the UX with </p>
+            </div>
+          </a>
+          <a href="https://first-website-vitalie-dragan.netlify.app/" target="_blank" rel="noreferrer" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+            <img class="object-cover w-full rounded-t-lg h-full md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src={FirstWebsite} alt="" />
+            <div class="flex flex-col justify-between p-4 leading-normal">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">First Website</h5>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Kinoland is utilizing the (OMDb) API, a RESTful web service that gives access to details used to enrich the UX with </p>
+            </div>
+          </a>
       </div>
     </section>
   );
