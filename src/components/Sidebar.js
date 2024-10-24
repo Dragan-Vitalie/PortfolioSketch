@@ -1,8 +1,8 @@
 import React from 'react';
-import Arrows from '../icons/Arrows';
-import Github from '../icons/Github';
-import Linkedin from '../icons/Linkedin';
-import Instagram from '../icons/Instagram';
+// import Arrows from '../icons/Arrows';
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { RiInstagramFill } from "react-icons/ri";
+import { GiImbricatedArrows } from "react-icons/gi";
 
 const Sidebar = ({ setActiveSection, activeSection}) => {
   return (
@@ -19,20 +19,20 @@ const Sidebar = ({ setActiveSection, activeSection}) => {
             }}
             className={`w-5/6 rounded-md text-left px-4 py-1 flex justify-between tracking-widest text-gray-300 hover:text-white hover:bg-gray-800 ${activeSection === section ? 'bg-gray-700 text-white font-bold' : ''}`}
           >
-            {activeSection === section && <Arrows />}
+            {activeSection === section && <GiImbricatedArrows className='w-6 h-6 -rotate-45'/>}
             {section.charAt(0).toUpperCase() + section.slice(1)}
           </button>
         ))}
       </nav>
       <div className="mt-16 space-x-6 justify-start rounded-lg flex">
          <a href="https://github.com/Vitalie-Dragan-Songkick" target="_blank" rel="noopener noreferrer" className="p-4 text-gray-400 hover:text-white hover:bg-gray-700 hover:rounded-xl">
-          <Github />
+          <FaGithub className='w-6 h-6'/>
         </a>
          <a href="https://www.linkedin.com/in/vitalie-dragan/" target="_blank" rel="noopener noreferrer" className="p-4 text-gray-400 hover:text-white hover:bg-gray-700 hover:rounded-xl">
-           <Linkedin />
+           <FaLinkedin className='w-6 h-6'/>
          </a>
          <a href="https://www.instagram.com/dragan_vitali/" target="_blank" rel="noopener noreferrer" className="p-4 text-gray-400 hover:text-white hover:bg-gray-700 hover:rounded-xl">
-           <Instagram />
+           <RiInstagramFill className='w-6 h-6'/>
          </a>
        </div>
     </aside>
