@@ -13,6 +13,8 @@ const Experience = () => {
             <div className="flex gap-2">
               <span className="bg-gray-700 text-gray-300 px-2 py-1 rounded text-sm">React</span>
               <span className="bg-gray-700 text-gray-300 px-2 py-1 rounded text-sm">Ruby on Rails</span>
+              <span className="bg-gray-700 text-gray-300 px-2 py-1 rounded text-sm">Figma</span>
+              <span className="bg-gray-700 text-gray-300 px-2 py-1 rounded text-sm">Shortcut</span>
             </div>
           </div>
           <div className="bg-gray-800 p-6 rounded-lg">
@@ -22,6 +24,8 @@ const Experience = () => {
               <span className="bg-gray-700 text-gray-300 px-2 py-1 rounded text-sm">React</span>
               <span className="bg-gray-700 text-gray-300 px-2 py-1 rounded text-sm">API</span>
               <span className="bg-gray-700 text-gray-300 px-2 py-1 rounded text-sm">Ruby on Rails</span>
+              <span className="bg-gray-700 text-gray-300 px-2 py-1 rounded text-sm">Shortcut</span>
+              <span className="bg-gray-700 text-gray-300 px-2 py-1 rounded text-sm">EDD / PRD</span>
             </div>
           </div>
           <div className="bg-gray-800 p-6 rounded-lg">
@@ -31,21 +35,26 @@ const Experience = () => {
               <span className="bg-gray-700 text-gray-300 px-2 py-1 rounded text-sm">React</span>
               <span className="bg-gray-700 text-gray-300 px-2 py-1 rounded text-sm">API</span>
               <span className="bg-gray-700 text-gray-300 px-2 py-1 rounded text-sm">Ruby on Rails</span>
+              <span className="bg-gray-700 text-gray-300 px-2 py-1 rounded text-sm">Shortcut</span>
+              <span className="bg-gray-700 text-gray-300 px-2 py-1 rounded text-sm">EDD / PRD</span>
             </div>
           </div>
           <div className="bg-gray-800 p-6 rounded-lg">
             <h3 className="text-xl font-semibold mb-2 flex justify-between items-center ">Improve Testing</h3>
             <p className="text-gray-300 mb-4"><strong className='text-lime-300'>Co-developed a feature </strong> enabling different types of users with distinct permissions to test new code changes in a specific environment before deployment to production. This enhancement reduced the time spent testing features impacting different user roles by over 93%.</p>
             <div className="flex gap-2">
-              <span className="bg-gray-700 text-gray-300 px-2 py-1 rounded text-sm">React</span>
-              <span className="bg-gray-700 text-gray-300 px-2 py-1 rounded text-sm">API</span>
               <span className="bg-gray-700 text-gray-300 px-2 py-1 rounded text-sm">Ruby on Rails</span>
+              <span className="bg-gray-700 text-gray-300 px-2 py-1 rounded text-sm">JavaScript</span>
+              <span className="bg-gray-700 text-gray-300 px-2 py-1 rounded text-sm">CSS / SCSS</span>
+
             </div>
           </div>
           <div className="bg-gray-800 p-6 rounded-lg">
             <h3 className="text-xl font-semibold mb-2 flex justify-between items-center ">POC using Auth0</h3>
             <p className="text-gray-300 mb-4"><strong className='text-lime-300'>Contributed to a proof of concept using Auth0 </strong>, including Figma wireframes and React integrations, which was subsequently integrated into the Website, Dashboard, and App.</p>
             <div className="flex gap-2">
+              <span className="bg-gray-700 text-gray-300 px-2 py-1 rounded text-sm">Figma</span>
+              <span className="bg-gray-700 text-gray-300 px-2 py-1 rounded text-sm">Shortcut</span>
               <span className="bg-gray-700 text-gray-300 px-2 py-1 rounded text-sm">React</span>
               <span className="bg-gray-700 text-gray-300 px-2 py-1 rounded text-sm">API</span>
               <span className="bg-gray-700 text-gray-300 px-2 py-1 rounded text-sm">Ruby on Rails</span>
@@ -55,19 +64,27 @@ const Experience = () => {
             <h3 className="text-xl font-semibold mb-2 flex justify-between items-center ">Ruby Upgrade</h3>
             <p className="text-gray-300 mb-4"><strong className='text-lime-300'>Contributed to the Ruby upgrade </strong>, across multiple services, verifying gems and tests before pipeline deployment, while following best practices and reporting a critical outdated gem issue.</p>
             <div className="flex gap-2">
-              <span className="bg-gray-700 text-gray-300 px-2 py-1 rounded text-sm">React</span>
-              <span className="bg-gray-700 text-gray-300 px-2 py-1 rounded text-sm">API</span>
-              <span className="bg-gray-700 text-gray-300 px-2 py-1 rounded text-sm">Ruby on Rails</span>
+              <span className="bg-gray-700 text-gray-300 px-2 py-1 rounded text-sm">Ruby</span>
+              <span className="bg-gray-700 text-gray-300 px-2 py-1 rounded text-sm">Docker</span>
+              <span className="bg-gray-700 text-gray-300 px-2 py-1 rounded text-sm">Packages</span>
+              <span className="bg-gray-700 text-gray-300 px-2 py-1 rounded text-sm">Gems</span>
+              <span className="bg-gray-700 text-gray-300 px-2 py-1 rounded text-sm">Rubocop</span>
             </div>
           </div>
         </div>
         <div className="bg-gray-800 mt-7 p-6 justify-center rounded-lg">
           <h3 className="text-xl font-semibold mb-2 flex justify-between items-center "> Following Best Practices within B2B</h3>
-          <p className="text-gray-300 mb-4"><strong className='text-lime-300'>Working within the B2B team </strong>, adopting Agile methodology while prioritizing CI/CD, continuous learning, and team productivity.</p>
+          <p className="text-gray-300 mb-4"><strong className='text-lime-300'>Working within the B2B team </strong>, adopting Agile methodology while prioritizing CI / CD, continuous learning, and team productivity.</p>
           <div className="flex gap-2">
-            <span className="bg-gray-700 text-gray-300 px-2 py-1 rounded text-sm">React</span>
-            <span className="bg-gray-700 text-gray-300 px-2 py-1 rounded text-sm">API</span>
+            <span className="bg-gray-700 text-gray-300 px-2 py-1 rounded text-sm">Docker</span>
+            <span className="bg-gray-700 text-gray-300 px-2 py-1 rounded text-sm">Ruby</span>
             <span className="bg-gray-700 text-gray-300 px-2 py-1 rounded text-sm">Ruby on Rails</span>
+            <span className="bg-gray-700 text-gray-300 px-2 py-1 rounded text-sm">Unit Testing</span>
+            <span className="bg-gray-700 text-gray-300 px-2 py-1 rounded text-sm">APIs</span>
+            <span className="bg-gray-700 text-gray-300 px-2 py-1 rounded text-sm">JavaScript</span>
+            <span className="bg-gray-700 text-gray-300 px-2 py-1 rounded text-sm">React</span>
+            <span className="bg-gray-700 text-gray-300 px-2 py-1 rounded text-sm">CSS / SCSS</span>
+            <span className="bg-gray-700 text-gray-300 px-2 py-1 rounded text-sm">Shortcut</span>
           </div>
         </div>
       </div>
