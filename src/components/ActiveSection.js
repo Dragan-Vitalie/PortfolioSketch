@@ -3,28 +3,40 @@ import { useEffect } from 'react';
 const useActiveSection = (setActiveSection) => {
   useEffect(() => {
     const sections = document.querySelectorAll('.section');
-    const options = {
-      root: null,
-      rootMargin: '0px',
-      threshold: 0.2 // make scroll when 50% is visibble
+    let observer;
+
+    const createObserver = () => {
+      const options = {
+        root: null,
+        rootMargin: window.innerWidth < 768 ? '0px' : '0px', 
+        threshold: window.innerWidth < 768 ? 0.1 : 0.3 // Use 10% on small screens, 30% on larger screens
+      };
+
+      observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      }, options);
+
+      sections.forEach(section => observer.observe(section));
     };
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          setActiveSection(entry.target.id);
-        }
-      });
-    }, options);
+    createObserver();
 
-    sections.forEach(section => {
-      observer.observe(section);
-    });
+    const handleResize = () => {
+      if (observer) {
+        sections.forEach(section => observer.unobserve(section));
+      }
+      createObserver();
+    };
+
+    window.addEventListener('resize', handleResize);
 
     return () => {
-      sections.forEach(section => {
-        observer.unobserve(section);
-      });
+      window.removeEventListener('resize', handleResize);
+      sections.forEach(section => observer.unobserve(section));
     };
   }, [setActiveSection]);
 };
