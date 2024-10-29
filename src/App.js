@@ -13,9 +13,9 @@ const App = () => {
 
   return (
     <>
-      <div className="bg-gray-900 text-white min-h-screen flex">
+      <div className="bg-gray-900 text-white min-h-screen flex top-0 bottom-0 m-0">
         <Sidebar setActiveSection={setActiveSection} activeSection={activeSection} />
-        <main className="flex-1 pl-12 pr-10 ml-0 xl:ml-80 overflow-y-auto">
+        <main className="flex-1 p-5 lg:pl-12 lg:pr-10 ml-0 xl:ml-80">
           <section id="about" className={`section ${activeSection === 'about' ? 'active' : ''}`}>
             <About />
           </section>
