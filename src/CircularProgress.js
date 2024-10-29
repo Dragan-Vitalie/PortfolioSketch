@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 const CircularProgress = ({ percentage, Icon }) => {
-  const radius = 45;
+  const radius = 37;
   const strokeWidth = 6;
   const circumference = 2 * Math.PI * radius;
 
@@ -21,7 +21,7 @@ const CircularProgress = ({ percentage, Icon }) => {
   }, [percentage, circumference, progress]);
 
   return (
-    <div className='ml-4' style={{ position: 'relative', width: '100px', height: '100px' }}>
+    <div className='ml-4' style={{ position: 'relative', width: '100px', height: '90px' }}>
       <svg width="100" height="100">
         <circle
           stroke="rgb(55 65 81)"
@@ -29,7 +29,7 @@ const CircularProgress = ({ percentage, Icon }) => {
           strokeWidth={strokeWidth}
           r={radius}
           cx="50"
-          cy="50"
+          cy="45"
         />
         <circle
           stroke={getColor(percentage)} // Use the color determined by the percentage
@@ -37,7 +37,7 @@ const CircularProgress = ({ percentage, Icon }) => {
           strokeWidth={strokeWidth}
           r={radius}
           cx="50"
-          cy="50"
+          cy="45"
           strokeDasharray={circumference}
           strokeDashoffset={offset}
           style={{
@@ -50,7 +50,7 @@ const CircularProgress = ({ percentage, Icon }) => {
         top: '50%', 
         left: '50%', 
         transform: 'translate(-50%, -50%)', 
-        fontSize: '45px' 
+        fontSize: '40px' 
       }}>
         <Icon />
       </div>
