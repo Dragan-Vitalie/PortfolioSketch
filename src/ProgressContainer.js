@@ -10,7 +10,7 @@ const skills = [
   { name: 'HTML / CSS / SCSS', percentage: 95, icon: FaHtml5 },
   { name: 'JavaScript', percentage: 90, icon: FaJs },
   { name: 'React.js', percentage: 80, icon: FaReact },
-  { name: 'API Proficient', percentage: 95, icon: TbApi },
+  { name: 'API', percentage: 95, icon: TbApi },
   { name: 'Bootstrap', percentage: 95, icon: FaBootstrap },
   { name: 'Tailwind CSS', percentage: 95, icon: SiTailwindcss }, 
   { name: 'Shadcn/ui', percentage: 75, icon: SiNextui },
