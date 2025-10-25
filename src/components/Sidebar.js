@@ -24,7 +24,7 @@ const Sidebar = ({ setActiveSection, activeSection}) => {
         ))}
       </nav>
       <div className="mt-8 space-x-6 justify-start rounded-lg flex">
-         <a href="https://github.com/Vitalie-Dragan-Songkick" target="_blank" rel="noopener noreferrer" className="p-4 text-gray-400 hover:text-white hover:bg-gray-700 hover:rounded-xl">
+         <a href="https://github.com/Dragan-Vitalie" target="_blank" rel="noopener noreferrer" className="p-4 text-gray-400 hover:text-white hover:bg-gray-700 hover:rounded-xl">
           <FaGithub className='w-6 h-6'/>
         </a>
          <a href="https://www.linkedin.com/in/vitalie-dragan/" target="_blank" rel="noopener noreferrer" className="p-4 text-gray-400 hover:text-white hover:bg-gray-700 hover:rounded-xl">
